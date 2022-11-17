@@ -1,38 +1,103 @@
+*{
+  box-sizing: border-box;
+}
+
+ul{
+  padding-inline-start: 0px;
+}
+
 .App {
   text-align: center;
+  /* width: 33%;
+  margin: 0px auto; */
+  box-sizing: border-box;
+}
+.Header{
+  width: 33%;
+  margin: 0px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Input-Wrapper{
+  width: 33%;
+  margin: 0px auto;
+}
+.Input-Wrapper input{
+  display: inline-block;
+  width: 80%;
+  padding: 0.75rem;
+  border: 2px solid #FBBF24;
+  border-radius: 5px;
+  margin-right: 5px;
+  outline:none;
+}
+.Input-Wrapper button{
+  display: inline-block;
+  width: 15%;
+  font-weight: 700;
+  padding:0.75rem;
+  border-radius: 5px;
+  background-color: #10B981;
+  color: #fff;
+  border: none;
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Input-Wrapper input:active{
+  outline:#10B981;
+
+}
+.Input-Wrapper input:focus{
+  outline:#10B981;
+}
+.Input-Wrapper button:hover{
+  cursor: pointer;
+  background-color: #ccc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.List-Todo-Wrapper{
+  width: 33%;
+  margin: 20px auto;
+  padding: 20px;
+  min-height:30rem;
+  background-color: #fef3c7;
+  border-radius: 5px;
+}
+.List-Todo-Header{
+  display:flex;
+  justify-content:space-between;
+}
+.List-Todo-Header p{
+  font-size: 20px;
+  color:#dc933f;
+}
+.List-Todo-Header select{
+  border: 2px solid #dc933f;
+  border-radius: 5px;
+  outline: none;
+}
+
+.List-Todo-Item{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid #dc933f;
+  justify-content:space-between;
+  padding:10px;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.List-Todo-Item li{
+  display: block;
+  list-style: none;
+  cursor: pointer;
+  font-family: Pangolin, cursive;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-icon{
+  color: #dc933f;
+  cursor: pointer;
+}
+
+.Complete{
+  text-decoration: line-through;
+  color: #ccc;
 }
